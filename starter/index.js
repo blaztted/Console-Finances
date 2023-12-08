@@ -116,30 +116,40 @@ avgChange = avgChange.toFixed(2);
 
 console.log(`Average Change: ${avgChange}`);
 
-// The greatest increase in Profit/Losses (date and amount) over the entire period.
+// !The greatest increase in Profit/Losses (date and amount) over the entire period.
 
 var greatestIncrease = 0;
 var greatestIncreaseDate = "";
+var greatestDecrease = 0;
+var greatestDecreaseDate = "";
 
 for (var i = 1; i < finances.length; i++) {
   var currentMonth = finances[i];
   var previousMonth = finances[i - 1];
 
   var increase = currentMonth[1] - previousMonth[1];
+  var decrease = previousMonth[1] - currentMonth[1];
 
   if (increase > greatestIncrease) {
     greatestIncrease = increase;
     greatestIncreaseDate = currentMonth[0];
   }
+  if (decrease > greatestDecrease) {
+    greatestDecrease = decrease;
+    greatestDecreaseDate = currentMonth[0];
+  }
 }
-
 console.log(
   `Greatest increase in Profits/Losses: ${greatestIncreaseDate} ($${greatestIncrease})`
 );
 
-// The greatest decrease in Profit/Losses (date and amount) over the entire period.
+console.log(
+  `Greatest decrease in Profits/Losses: ${greatestDecreaseDate} ($-${greatestDecrease})`
+);
 
-// When you open your code in the browser your resulting analysis should look similar to the following:
+// !The greatest decrease in Profit/Losses (date and amount) over the entire period.
+
+// !When you open your code in the browser your resulting analysis should look similar to the following:
 
 // Financial Analysis
 // ----------------
