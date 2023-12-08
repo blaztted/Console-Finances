@@ -87,6 +87,8 @@ var finances = [
   ["Feb-2017", 671099],
 ];
 
+console.log("Financial Analysis");
+console.log("----------------");
 // !The total number of months included in the dataset.
 
 var totalMonths = finances.length;
@@ -147,6 +149,14 @@ console.log(
   `Greatest decrease in Profits/Losses: ${greatestDecreaseDate} ($-${greatestDecrease})`
 );
 
+alert(`"Financial Analysis
+-------------------------------------------------------------------------------
+Total months: ${totalMonths}
+Total: $ ${income}
+Average Change: ${avgChange}
+Greatest increase in Profits/Losses: ${greatestIncreaseDate} ($${greatestIncrease})
+Greatest decrease in Profits/Losses: ${greatestDecreaseDate} ($-${greatestDecrease})
+`);
 // !The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
 // !When you open your code in the browser your resulting analysis should look similar to the following:
