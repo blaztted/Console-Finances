@@ -7,7 +7,7 @@ This repository is where I code my [Finances](https://github.com/blaztted/Consol
 ## Deployed Site
 
 <p align="center">
-  <img alt="frontpage and console print" src="./starter/images/finance.png">
+  <img alt="frontpage and console print" src="./images/finance.png">
 
 You can find the code [here](https://blaztted.github.io/Console-Finances/).
 
