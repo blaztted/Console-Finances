@@ -89,23 +89,17 @@ var finances = [
 
 console.log("Financial Analysis");
 console.log("----------------");
-// !The total number of months included in the dataset.
 
 var totalMonths = finances.length;
 console.log(`Total months: ${totalMonths}`);
 
-// !The net total amount of Profit/Losses over the entire period.
 var income = 0;
-
 for (let i = 0; i < finances.length; i++) {
   income += finances[i][1];
 }
 console.log(`Total: $ ${income}`);
 
-//! The average of the changes in Profit/Losses over the entire period.
-
 var totalChange = 0;
-
 for (var i = 1; i < finances.length; i++) {
   var curAmount = finances[i][1];
   var prevAmount = finances[i - 1][1];
@@ -117,8 +111,6 @@ var avgChange = totalChange / (finances.length - 1); //var avgChange = Math.roun
 avgChange = avgChange.toFixed(2);
 
 console.log(`Average Change: ${avgChange}`);
-
-// !The greatest increase in Profit/Losses (date and amount) over the entire period.
 
 var greatestIncrease = 0;
 var greatestIncreaseDate = "";
@@ -149,31 +141,11 @@ console.log(
   `Greatest decrease in Profits/Losses: ${greatestDecreaseDate} ($-${greatestDecrease})`
 );
 
-alert(`"Financial Analysis
--------------------------------------------------------------------------------
-Total months: ${totalMonths}
-Total: $ ${income}
-Average Change: ${avgChange}
-Greatest increase in Profits/Losses: ${greatestIncreaseDate} ($${greatestIncrease})
-Greatest decrease in Profits/Losses: ${greatestDecreaseDate} ($-${greatestDecrease})
-`);
-// !The greatest decrease in Profit/Losses (date and amount) over the entire period.
-
-// !When you open your code in the browser your resulting analysis should look similar to the following:
-
-// Financial Analysis
-// ----------------
-// Total Months: 86
-// Total: $38382578
-// Average Change: -2315.12
-// Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
-// Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
-// Your final code should print the analysis to the console.
-
-// Hints:
-
-// You will need to do some research on your own for this project!
-
-// Remember, in order to combine strings and variables in the console you will need to use concatenation.
-
-// How do you only print to the nearest 100th in JavaScript?
+// alert(`"Financial Analysis
+// -------------------------------------------------------------------------------
+// Total months: ${totalMonths}
+// Total: $${income}
+// Average Change: ${avgChange}
+// Greatest increase in Profits/Losses: ${greatestIncreaseDate} ($${greatestIncrease})
+// Greatest decrease in Profits/Losses: ${greatestDecreaseDate} ($-${greatestDecrease})
+// `);
